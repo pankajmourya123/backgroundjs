@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgroundchanger</title>
+    <style>
+        body{
+            margin: 0px;
+            padding:0px 200px;
+        }
+        .color{
+            width: 20px;
+            height: 20px;
+            display:inline-block; 
+            border: 2px solid red;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            top: 20px;
+        }
+        #white{
+            background-color: white;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #black{
+              background-color: black;
+        }
+        .swicther{
+            text-align: right;
+            position: relative;
+            left:100px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        .content{
+            text-align: center;
+            
+        }
+        img{
+            width: 30%;
+            height: auto;
+        }
+        p{
+            font-size: 30px;
+            text-align: justify;
+        }
+        
+    </style>
+</head>
+    <div class="full">
+    <div class="swicther">
+        <span class="color" id="white" onclick="colorBG('white')"></span>
+        <span class="color" id="yellow" onclick="colorBG('yellow')"></span>
+        <span class="color" id="aqua" onclick="colorBG('aqua')"></span>
+        <span class="color" id="black" onclick="colorBG('black')"></span>
+    </div>
+    <h1 class="txt">NDA(National Defence Academy)</h1>
+    <div class="content">
+    <img src="Sudan_Building_NDA_Logo.jpg">
+    <p class="txt">
+
+        The National Defence Academy (NDA) is the joint defence service training institute of the Indian Armed Forces, where cadets of the three services i.e. the Indian Army, the Indian Navy and the Indian Air Force train together before they go on to respective service academy for further pre-commission training. The NDA is located in Khadakwasla, Pune, Maharashtra. It is the first tri-service academy in the world.
+
+The alumni of NDA include 3 Param Vir Chakra recipients and 12 Ashoka Chakra recipients. NDA has also produced 27 service Chiefs of Staff till date. The current Chiefs of Staff of the Army, the Navy and the Air Force are all NDA alumni from the same course.[3][4] The 137th course graduated on 30 November 2019, consisting of 188 Army cadets, 38 Naval cadets, 37 Air Force cadets and 20 cadets from friendly foreign countries.[5] The Supreme Court of India passed an order in August 2021 that allowed female candidates to appear for the all upcoming NDA entrance examination
+    </p>
+</div>
+</div>
+</body>
+<script>
+    
+   
+function colorBG(n){
+        document.body.style.backgroundColor=n;
+        let text=document.getElementsByClassName("txt")
+        if(n=='black'){
+            for(let item of text){
+                item.style.color='white'
+            }
+    }
+    else{
+        for(let item of text){
+                item.style.color='black'
+            }
+    }
+    }
+   
+    
+</script>
+</html>
